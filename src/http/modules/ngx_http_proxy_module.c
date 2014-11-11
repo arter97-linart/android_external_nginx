@@ -922,7 +922,7 @@ ngx_http_proxy_eval(ngx_http_request_t *r, ngx_http_proxy_ctx_t *ctx,
 
     } else {
         u->resolved->host = url.host;
-        u->resolved->port = (in_port_t) (url.no_port ? port : url.port);
+        u->resolved->port = (uint16_t) (url.no_port ? port : url.port);
         u->resolved->no_port = url.no_port;
     }
 

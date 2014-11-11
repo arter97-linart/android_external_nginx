@@ -1143,7 +1143,7 @@ ngx_int_t
 ngx_http_add_listen(ngx_conf_t *cf, ngx_http_core_srv_conf_t *cscf,
     ngx_http_listen_opt_t *lsopt)
 {
-    in_port_t                   p;
+    uint16_t                    p;
     ngx_uint_t                  i;
     struct sockaddr            *sa;
     struct sockaddr_in         *sin;

@@ -273,7 +273,7 @@ typedef struct {
 
 typedef struct {
     ngx_int_t                  family;
-    in_port_t                  port;
+    uint16_t                   port;
     ngx_array_t                addrs;     /* array of ngx_http_conf_addr_t */
 } ngx_http_conf_port_t;
 

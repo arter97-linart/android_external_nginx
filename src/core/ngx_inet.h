@@ -80,8 +80,8 @@ typedef struct {
     ngx_str_t                 port_text;
     ngx_str_t                 uri;
 
-    in_port_t                 port;
-    in_port_t                 default_port;
+    uint16_t                  port;
+    uint16_t                  default_port;
     int                       family;
 
     unsigned                  listen:1;

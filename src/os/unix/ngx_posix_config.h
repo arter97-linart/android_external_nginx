@@ -79,10 +79,6 @@
 #include <netdb.h>
 #include <sys/un.h>
 
-#if (NGX_HAVE_LIMITS_H)
-#include <limits.h>             /* IOV_MAX */
-#endif
-
 #ifdef __CYGWIN__
 #include <malloc.h>             /* memalign() */
 #endif
@@ -93,7 +89,7 @@
 
 
 #ifndef IOV_MAX
-#define IOV_MAX   16
+#define IOV_MAX   1024
 #endif
 
 

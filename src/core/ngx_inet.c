@@ -679,8 +679,8 @@ ngx_parse_inet_url(ngx_pool_t *pool, ngx_url_t *u)
             return NGX_ERROR;
         }
 
-        u->port = (in_port_t) n;
-        sin->sin_port = htons((in_port_t) n);
+        u->port = (uint16_t) n;
+        sin->sin_port = htons((uint16_t) n);
 
         u->port_text.len = len;
         u->port_text.data = port;
@@ -703,8 +703,8 @@ ngx_parse_inet_url(ngx_pool_t *pool, ngx_url_t *u)
                         return NGX_ERROR;
                     }
 
-                    u->port = (in_port_t) n;
-                    sin->sin_port = htons((in_port_t) n);
+                    u->port = (uint16_t) n;
+                    sin->sin_port = htons((uint16_t) n);
 
                     u->port_text.len = last - host;
                     u->port_text.data = host;
@@ -867,8 +867,8 @@ ngx_parse_inet6_url(ngx_pool_t *pool, ngx_url_t *u)
                 return NGX_ERROR;
             }
 
-            u->port = (in_port_t) n;
-            sin6->sin6_port = htons((in_port_t) n);
+            u->port = (uint16_t) n;
+            sin6->sin6_port = htons((uint16_t) n);
 
             u->port_text.len = len;
             u->port_text.data = port;
@@ -945,7 +945,7 @@ ngx_inet_resolve_host(ngx_pool_t *pool, ngx_url_t *u)
 {
     u_char               *p, *host;
     size_t                len;
-    in_port_t             port;
+    uint16_t              port;
     ngx_uint_t            i;
     struct addrinfo       hints, *res, *rp;
     struct sockaddr_in   *sin;
@@ -1091,7 +1091,7 @@ ngx_inet_resolve_host(ngx_pool_t *pool, ngx_url_t *u)
 {
     u_char              *p, *host;
     size_t               len;
-    in_port_t            port;
+    uint16_t             port;
     in_addr_t            in_addr;
     ngx_uint_t           i;
     struct hostent      *h;

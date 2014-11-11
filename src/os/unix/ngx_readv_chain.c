@@ -82,7 +82,7 @@ ngx_readv_chain(ngx_connection_t *c, ngx_chain_t *chain, off_t limit)
             iov->iov_len += n;
 
         } else {
-            if (vec.nelts >= IOV_MAX) {
+            if (vec.nelts >= 1024) {
                 break;
             }
 

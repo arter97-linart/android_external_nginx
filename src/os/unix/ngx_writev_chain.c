@@ -85,7 +85,7 @@ ngx_writev_chain(ngx_connection_t *c, ngx_chain_t *in, off_t limit)
                 iov->iov_len += size;
 
             } else {
-                if (vec.nelts >= IOV_MAX) {
+                if (vec.nelts >= 1024) {
                     break;
                 }
 

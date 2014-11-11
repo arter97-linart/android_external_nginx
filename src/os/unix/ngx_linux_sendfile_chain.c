@@ -122,7 +122,7 @@ ngx_linux_sendfile_chain(ngx_connection_t *c, ngx_chain_t *in, off_t limit)
                 iov->iov_len += (size_t) size;
 
             } else {
-                if (header.nelts >= IOV_MAX) {
+                if (header.nelts >= 1024) {
                     break;
                 }
 

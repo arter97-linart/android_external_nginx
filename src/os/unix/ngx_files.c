@@ -182,7 +182,7 @@ ngx_write_chain_to_file(ngx_file_t *file, ngx_chain_t *cl, off_t offset,
 
         /* create the iovec and coalesce the neighbouring bufs */
 
-        while (cl && vec.nelts < IOV_MAX) {
+        while (cl && vec.nelts < 1024) {
             if (prev == cl->buf->pos) {
                 iov->iov_len += cl->buf->last - cl->buf->pos;
 
