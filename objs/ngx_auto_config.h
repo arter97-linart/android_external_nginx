@@ -337,27 +337,27 @@
 
 
 #ifndef NGX_CONF_PATH
-#define NGX_CONF_PATH  "conf/nginx.conf"
+#define NGX_CONF_PATH  "nginx.conf"
 #endif
 
 
 #ifndef NGX_PID_PATH
-#define NGX_PID_PATH  "logs/nginx.pid"
+#define NGX_PID_PATH  "/dev/null"
 #endif
 
 
 #ifndef NGX_LOCK_PATH
-#define NGX_LOCK_PATH  "logs/nginx.lock"
+#define NGX_LOCK_PATH  "/dev/null"
 #endif
 
 
 #ifndef NGX_ERROR_LOG_PATH
-#define NGX_ERROR_LOG_PATH  "logs/error.log"
+#define NGX_ERROR_LOG_PATH  "/dev/null"
 #endif
 
 
 #ifndef NGX_HTTP_LOG_PATH
-#define NGX_HTTP_LOG_PATH  "logs/access.log"
+#define NGX_HTTP_LOG_PATH  "/dev/null"
 #endif
 
 
